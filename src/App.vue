@@ -111,7 +111,6 @@ export default {
       this.isPlaying = false;
     },
     handleChangeFinalScore(data) {
-      console.log(data);
       this.finalScore = data;
     }
   },
@@ -146,7 +145,7 @@ export default {
           this.player === 2 && this.hold();
           break;
         case 'Slash':
-          this.inputFocus = true;
+          this.inputFocus = !this.inputFocus;
           break;
         case 'End':
           this.endGame();
